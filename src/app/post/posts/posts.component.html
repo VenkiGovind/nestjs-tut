@@ -1,0 +1,12 @@
+<p>Lists all Posts: </p>
+<div>
+  <ul>
+    <li *ngFor="let post of myPosts">
+      <div>{{post.id}}</div>
+      <div class="post-title">{{post.title}}</div>
+      <div>
+        <p class="post-body">{{post.body}}</p>        
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,27 @@
+<h1>Employee List (Parent Compenent)</h1>
+<br/>
+Show list of employees here:
+<br/>
+<div>
+  <table>
+    <tr>
+      <td class="emp-tbl">
+        Emp #
+      </td>
+
+      <td class="emp-tbl">
+        Emp Name
+      </td>
+
+      <td class="emp-tbl">
+        Email
+      </td>
+    </tr>
+    <tr (click)="selectedEmployee(emp)" *ngFor="let emp of employees">
+      <td>{{emp.empId}}</td>
+      <td>{{emp.empName}}</td>
+      <td>{{emp.empEmail}}</td>
+    </tr>
+  </table>
+</div>
+<app-details [employee]="selectedEmployeeData" [address]="officeAddress"></app-details>
